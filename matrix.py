@@ -35,9 +35,7 @@ class Matrix:
     def invert(self):
         if abs(self) != 0:
             if self.__col == self.__row:
-                print(self)
                 copy = [[self.__content[i][j] for j in range(len(self.__content[0]))] for i in range(len(self.__content))]
-                print(Matrix(copy))
                 inverse = Matrix.identity(len(copy)).getContent()
 
                 pos = 0
@@ -163,4 +161,3 @@ class Matrix:
                     return False
 
         return True
-
